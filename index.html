@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo HTML, CSS e DOM</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #4a5568;
+      color: white;
+      padding: 20px;
+    }
+
+    nav {
+      background-color: #e2e8f0;
+      padding: 15px;
+    }
+
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #1a202c;
+      font-weight: bold;
+    }
+
+    main {
+      background-color: yellow;
+      padding: 20px;
+      min-height: 400px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Salto São Francisco</h1>
+  </header>
+
+  <nav>
+    <a href="#">Início</a>
+    <a href="#">Sobre</a>
+    <a href="#">Contato</a>
+  </nav>
+
+  <main id="conteudo">
+    <!-- O JavaScript criará os elementos aqui -->
+  </main>
+
+  <script>
+    // Selecionar o elemento main
+    const main = document.getElementById("conteudo");
+
+    // CRIAR O PRIMEIRO TÍTULO
+    const titulo = document.createElement("h2");
+    titulo.textContent = "Se aventure sobre nosso site do Salto São Francisco";
+    main.appendChild(titulo);
+
+    // CRIAR O SEGUNDO TÍTULO (Bug corrigido: agora usando titulo2)
+    const titulo2 = document.createElement("h3");
+    titulo2.textContent = "Está presente em turvo - paraná";
+    main.appendChild(titulo2);
+
+    // CRIAR UM PARÁGRAFO
+        const paragrafo = document.createElement("p");
+        paragrafo.textContent = "Com impressionantes 196 metros de queda livre, o Salto São Francisco é reconhecido como a maior cachoeira da região Sul do Brasil e uma das mais altas de todo o país, formando um paredão rochoso cercado por vegetação exuberante";
+        main.appendChild(paragrafo);
+
+        const paragrafo2 = document.createElement("p");
+        paragrafo2.textContent = "A cachoeira está localizada na Serra da Esperança, exatamente na tríplice fronteira entre os municípios paranaenses de Guarapuava, Prudentópolis e Turvo, sendo protegida pelo Parque Estadual Salto São Francisco da Esperança.";
+        main.appendChild(paragrafo2);
+
+        const paragrafo3 = document.createElement("p");
+        paragrafo3.textContent = "Antes de despencar pelo abismo principal, as águas do rio São Francisco formam o Salto dos Cavalheiros, uma queda menor que cria piscinas naturais cristalinas e oferece um visual incrível para quem caminha pela parte superior do parque, aqui esta algumas fatos:";
+        main.appendChild(paragrafo3);
+
+        // CRIAR UMA LISTA ORDENADA
+        const lista = document.createElement("ol");
+
+        // Primeiro item
+        const item1 = document.createElement("li");
+        item1.textContent = "Maior cachoeira da região Sul do Brasil, com 196 metros de queda livre";
+        lista.appendChild(item1);
+
+        // Segundo item
+        const item2 = document.createElement("li");
+        item2.textContent = "Localizado na Serra da Esperança, no Paraná, entre Guarapuava, Prudentópolis e Turvo";
+        lista.appendChild(item2);
+
+        // Terceiro item
+        const item3 = document.createElement("li");
+        item3.textContent = "Possui trilhas ecológicas até os mirantes superiores e até a base da queda";
+        lista.appendChild(item3);
+
+        const imagem = document.createElement("img");
+        imagem.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSZ78OlFpgnt_HQGdlx2seBniytAz8-CzrDdHqfXzYdQ&s=10";
+      imagem.alt = "Cachoeira Salto São Francisco";
+
+      imagem.style.width = "100%";
+      imagem.style.maxWidth = "600px";
+      imagem.style.display = "block";
+      imagem.style.margin = "20px auto";
+      imagem.style.borderRadius = "8px";
+
+      document.body.appendChild(imagem);
+
+        // Adicionar a lista ao main
+        main.appendChild(lista);
+    </script>
+    
+</body>
+</html>
+
+
